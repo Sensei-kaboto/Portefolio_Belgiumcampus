@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <defs>
+    <style>
+      .ring { fill: none; stroke: #17181A; stroke-width: 2.5; }
+      .letter { font-family: 'Georgia', 'Times New Roman', serif; font-style: italic; fill: #17181A; }
+      .name { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 15px; letter-spacing: 6px; fill: #17181A; }
+    </style>
+  </defs>
+
+  <!-- outer ring -->
+  <circle class="ring" cx="200" cy="180" r="120"/>
+
+  <!-- monogram: overlapping J and D -->
+  <text x="150" y="215" class="letter" font-size="150" text-anchor="middle">J</text>
+  <text x="245" y="215" class="letter" font-size="150" text-anchor="middle">D</text>
+
+  <!-- name below -->
+  <text x="200" y="345" class="name" text-anchor="middle">JOHN&#160;&#160;DOE</text>
+</svg>

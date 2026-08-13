@@ -1,0 +1,67 @@
+body{
+    background-color: aliceblue;
+    margin: 0px;
+}
+main{
+    margin: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+h1{
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: rgb(24, 43, 43);
+    color: aliceblue;
+    margin: 0px;
+}
+h3{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: rgb(101, 150, 150);
+    color: aliceblue;
+    margin: 0px;
+    text-align: left;
+    padding: 15px;
+}
+.navbar ul{
+    list-style-type: none;
+    background-color: darkslategray;
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+    align-items: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.navbar a{
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+    text-align: center;
+}
+.navbar a:hover{
+    background-color: rgb(24, 43, 43);
+}
+.navbar li{
+    float: left;
+}
+.homepage{
+    color: rgb(24, 43, 43);
+}
+.homepage a{
+    color: rgb(24, 43, 43);
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+    text-align: left;
+}
+#name{
+    font-weight: bold;
+}
+footer{
+    text-align: right;
+    margin-right: 0;
+    background-color: rgb(24, 43, 43);
+    color: aliceblue;
+}
+#footer{
+    margin-right: 10px;
+}
