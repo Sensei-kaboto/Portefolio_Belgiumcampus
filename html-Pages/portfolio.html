@@ -3,23 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="/styles/stylesheet.css">
+    <title>Portfolio Website</title>
+    <link rel="stylesheet" href="../styles/stylesheet.css">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
 </head>
 <body>
-    <header>
-        <h1>John Doe</h1>   
-            <nav class="navbar">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="/html-Pages/about.html">About</a></li>
-                    <li><a href="/html-Pages/portfolio.html">Portfolio</a></li>
-                    <li><a href="/html-Pages/contact.html">Contact</a></li>
-                </ul>
-            </nav>
-    </header>
+     <!-- Header  section -->
+    <header class="header-container">
+        <p>
+            Portefolio
+        </p>
     
-    <h3>Portfolio Page</h3>
+        <a class="Link-header" href=""> <i class='bx bxl-github'></i></a>
+
+        <nav class="nav-bar">
+            <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+    <ul id="nav-menu">
+        <li>
+                        <a href="../index.html" target="_parent">Home</a>
+
+        </li>
+        <li>
+                        <a href="about.html" target="_parent">About</a>
+
+        </li>
+        <li>
+                        <a href="portfolio.html" target="_parent">Portfolio</a>
+
+        </li>
+        <li>
+                        <a href="contact.html" target="_parent">Contact</a>
+
+        </li>
+    </ul>
+        </nav>
+
+    </header>
+
 
   <main class="Portfolio">
         <h2>My Projects</h2>
@@ -31,7 +53,8 @@
             <div class="Project-card">
 
                 <div class="Project-image">
-                    <span>Project 1</span>
+                    <!-- <span>Project 1</span> -->
+                   <img class="project-image" src="../images/Port-1 1.png" alt="project">
                 </div>
 
                 <div  class="Project-Info">
@@ -51,8 +74,10 @@
 
             <div class="Project-card">
                <div class="Project-image">
-                <span>Project 2</span>
-               </div>
+                    <!-- <span>Project 1</span> -->
+                   <img class="project-image" src="../images/Port-1 1.png" alt="project">
+                </div>
+
                <div class="Project-Info">
                 <h3>Personal Portfolio Website</h3>
 
@@ -70,9 +95,22 @@
         </div>
        
     </main>
-    <footer>
-        <span id="footer">© 2020 John Doe</span>        
+    <!-- footer container -->
+
+    <footer class="footer-container">
+        <p>
+           &copy John Doe
+        </p>
+        <div class="link-footer">
+            <i class='bx bxl-github'></i>
+            <i class='bx bxl-facebook-circle'></i>
+            <i class='bx bxl-linkedin-square'></i>
+            <i class='bx bxl-instagram-alt'></i>
+        </div>
+
     </footer>
+    
+    <script src="../js/script.js"></script>
 
 </body>
 </html>

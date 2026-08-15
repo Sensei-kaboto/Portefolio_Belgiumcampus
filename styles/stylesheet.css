@@ -1,123 +1,127 @@
-
-/* =========================
-   Base / Mobile First
-   ========================= */
+/* =========================================================
+   BASE / MOBILE FIRST
+   ========================================================= */
 
 @import url('https://fonts.googleapis.com/css2?family=Libertinus+Math&display=swap');
 
-html{
+
+/* =========================
+   GENERAL
+   ========================= */
+
+
+html {
     margin: 0;
     padding: 0;
+    width: 100%;
+    overflow-x: hidden;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #dff6f6;
 }
 
 body {
     margin: 0;
+    width: 100%;
     display: grid;
     grid-template-columns: 1fr;
+    overflow-x: hidden;
 }
 
-a{
+a {
     text-decoration: none;
     color: aliceblue;
 }
 
-/* ----------------------------------------------------------
-    The hero section
-  ---------------------------------------------------------- */
 
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+   main{
+    background: url("/images/doodle\ items.png") ;
+   }
 .header-container {
     background: linear-gradient(90deg, #0b1719, #162f35);
     color: aliceblue;
-    font-family:"Libertinus Math",system-ui;
+    font-family: "Libertinus Math", system-ui;
     font-weight: 600;
     text-transform: uppercase;
+
     display: grid;
-    grid-template-columns: 0.5fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     align-items: center;
-    gap: 30px;
-    padding: 2px 10px;
+
+    padding: 5px 10px;
+
     position: fixed;
     top: 0;
     left: 0;
+
     width: 100%;
+    box-sizing: border-box;
+
     z-index: 1000;
 }
-
-
-
-.header-container p{
+.header-container p {
     font-size: 12px;
     letter-spacing: 2px;
+    margin: 0;
 }
 
-.Link-header{
-    margin-left: 60px;
+.Link-header {
+    text-align: center;
 }
 
-
-
-.Link-header i,.link-footer i{
+.Link-header i,
+.link-footer i {
     font-size: 30px;
-     color: darkslategray;
+    color: aliceblue;
 }
 
-.Link-header i:hover , .link-footer i:hover{
-    color: #8bbfd5;
+.Link-header i:hover,
+.link-footer i:hover {
+    color: rgb(101, 150, 150);
+
 }
 
 
-/*----------- the button nav ----------*/
+/* =========================================================
+   MOBILE NAVIGATION
+   ========================================================= */
 
-.nav-bar{
-    position: relative;
-    margin-left: 75px;
+.nav-bar {
+    text-align: right;
 }
-.nav-bar ul{
+
+.nav-bar ul {
     display: none;
+
     list-style-type: none;
     padding: 0;
     margin: 0;
 
     position: fixed;
     top: 50px;
-    right: 0px;
+    right: 0;
 
     width: 198px;
     height: 45vh;
+
     opacity: 0.98;
     background-color: #0b1719;
-    transition: left 0.3s ease;
+
+    z-index: 1100;
 }
 
-.nav-bar li:hover{
-    background-color: #2c5364;
-}
-
-
-.menu-btn{
-    background: darkslategray;
-    color: aliceblue;
-    border: none;
-    font-size: 30px;
-    padding: 2px 5px;
-    cursor: pointer;
-    margin-bottom: 10px;
-}
-
-.menu-btn:hover{
-     background-color: #5f8da1
-}
-
-.nav-bar ul.show{
+.nav-bar ul.show {
     display: block;
 }
 
-.nav-bar li{
+.nav-bar li {
     float: none;
 }
 
-.nav-bar a{
+.nav-bar a {
     display: block;
     color: aliceblue;
     text-decoration: none;
@@ -125,24 +129,54 @@ a{
     text-align: center;
 }
 
-.nav-bar a:hover{
+.nav-bar a:hover {
     background-color: #2a4f5e;
 }
 
+.nav-bar li:hover {
+    background-color:rgb(101, 150, 150);
 
-
-/* ===========================================================
-    The Main Content
-    ========================================================== */
-
-.main-container {
-    background-color: #eef5f5;
-    padding: 3px 20px 15px;
 }
 
-/* ----- the title ---------- */
 
-#hello{
+/* =========================
+   MENU BUTTON
+   ========================= */
+
+.menu-btn {
+    background-color: darkslategray;
+    color: aliceblue;
+
+    border: none;
+
+    font-size: 30px;
+    padding: 0px 5px;
+    margin-bottom: 5px;
+
+    cursor: pointer;
+}
+
+.menu-btn:hover {
+        background-color: rgb(101, 150, 150);
+
+}
+
+
+/* =========================================================
+   MAIN CONTENT
+   ========================================================= */
+
+.main-container {
+    
+    padding: 80px 20px 15px;
+}
+
+
+/* =========================================================
+   HERO / INTRO
+   ========================================================= */
+
+#hello {
     font-family: "Libertinus Math", system-ui;
     text-transform: capitalize;
     font-size: 20px;
@@ -150,324 +184,783 @@ a{
     font-weight: 600;
 }
 
-/* ----- The Image ------ */
-.image-john{
-    height : 200px;
-    width : 200px;
+
+/* =========================
+   PROFILE IMAGE
+   ========================= */
+
+.image-john {
+    height: 200px;
+    width: 200px;
+
     border-radius: 50%;
-    background:linear-gradient(90deg, #0b1719, #162f35);;
-    padding:10px;
-    margin-bottom: 10px;
+
+    background: linear-gradient(90deg, #0b1719, #162f35);
+
+    padding: 10px;
     margin: auto;
 }
- .Profile-img{
-    height:100%;
-    width:100%;
-    object-fit: cover;
-    border-radius: 50%;
-    border:solid #0b1719;
 
+.Profile-img {
+    height: 100%;
+    width: 100%;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+    border: solid #0b1719;
 }
 
-/* ------- job title ------------ */
-#job{
+
+/* =========================
+   JOB TITLE
+   ========================= */
+
+#job {
     font-family: "Libertinus Math", system-ui;
+
     font-size: 30px;
     font-weight: 900;
+
     margin: 0;
     padding: 10px;
+
     text-align: center;
 }
 
-#job span{
+#job span {
     font-size: 18px;
     font-weight: 400;
+
     text-transform: capitalize;
     font-style: italic;
 }
 
-/* ------- The paragraphe ------- */
 
+/* =========================================================
+   CONTACT LINKS
+   ========================================================= */
 
-.contact-links{
-text-align: center;
-margin: 10px;
+.contact-links {
+    text-align: center;
+    margin: 10px;
 }
 
-.links-title{
-
+.links-title {
     padding: 10px 14px;
+
     border: none;
-    background:darkslategray;
-    color:aliceblue;
+
+    background-color: darkslategray;
+    color: aliceblue;
+
     font-size: 16px;
     font-weight: 400;
+
     border-radius: 15px;
+
     cursor: pointer;
-    transition: all 0.3s ease;
+
+    transition: background-color 0.3s ease;
+
     margin-right: 4px;
-    
 }
 
-.links-title:hover{
-    background-color: #8bbfd5;
+.links-title:hover {
+       background-color: rgb(101, 150, 150);
+
 }
 
 
-/* ==========================================
-    About section in the Index Html
-    =========================================== */
+/* =========================================================
+   SECTION HEADINGS
+   ========================================================= */
 
-    .about-container, .Portefolio-container,.Contact-container{
-        font-family:"Libertinus Math",system-ui ;
-        font-size: 25px;
-        font-weight: 800;
-        text-transform: capitalize;
-      
-    }
+.about-container,
+.Portefolio-container,
+.Contact-container {
+    font-family: "Libertinus Math", system-ui;
 
-    .about-container p , .Portefolio-container p, .Contact-container p {
-        display: inline;
-        float: left;
-        margin: 0;
-        padding: 0;
-    }
+    font-size: 25px;
+    font-weight: 800;
 
-    .horizon{
-        margin-top: 50px;
-        margin-left: 65px;
-        align-items: end;
-        padding: 3px;
-    }
-
-    .horizon hr{
-
-    border: none;
-    height: 1.5px;
-    background: linear-gradient(to right, transparent, #2c5364, transparent);
+    text-transform: capitalize;
 }
 
-#more-details{
-    text-align: justify;
-    font-size: 12.5px;
+.about-container p,
+.Portefolio-container p,
+.Contact-container p {
+    display: inline;
+    float: left;
+
     margin: 0;
-    margin-left:35px;
+    padding: 0;
+}
+
+
+/* =========================================================
+   HORIZONTAL LINE
+   ========================================================= */
+
+.horizon {
+    margin-top: 50px;
+    margin-left: 65px;
+
+    padding: 3px;
+}
+
+.horizon hr {
+    border: none;
+
+    height: 1.5px;
+
+    background: linear-gradient(
+        to right,
+        transparent,
+        #2c5364,
+        transparent
+    );
+}
+
+
+/* =========================
+   MORE DETAILS
+   ========================= */
+
+#more-details {
+    text-align: justify;
+
+    font-size: 12.5px;
+    font-weight: 600;
+
+    margin-bottom: 15px;
+    margin-left: 35px;
+
     text-transform: capitalize;
 }
 
 
-/* --------- skills side --------- */
+/* =========================================================
+   SKILLS
+   ========================================================= */
 
-.skills{
+.skills {
     display: grid;
-    grid-template-columns: 0.5fr 0.5fr 0.5fr;
-    font-family: "Libertinus Math",system-ui;
+
+    grid-template-columns: 1fr 1fr 1fr;
+
+    gap: 10px;
+
+    font-family: "Libertinus Math", system-ui;
+
     font-weight: 800;
     font-size: 14.5px;
-    padding: 20px opx;
+
     margin-left: 20px;
 }
 
-.skills p span{
+.skills p span {
     font-size: 9px;
 }
 
 
-/* ==========================================
-    Portefolio section in the Index Html
-    =========================================== */
+/* =========================================================
+   PORTFOLIO SECTION ON INDEX
+   ========================================================= */
 
-.horizon.Portefolio{
+.horizon.Portefolio {
     margin-top: 10px;
 }
 
-.Portefolio-img{
-    text-align: center;
-    padding: 15px;
-    margin: 0;
+
+
+.project-image {
+    height: 165px;
+    width: 100%;
+    max-width: 350px;
 }
 
-.project-image{
-    height: 180px;
-    width: 320px;
-}
 
-.contact-links.Contact-container{
+/* =========================================================
+   CONTACT SECTION ON INDEX
+   ========================================================= */
+
+.contact-links.Contact-container {
     margin-top: 10px;
     text-align: left;
     margin-left: 30px;
 }
 
-.horizon.Contact-container{
+.horizon.Contact-container {
     margin-top: 0;
 }
 
-.footer-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    text-align: center;
-    background: linear-gradient(90deg, #0b1719, #162f35);
-    color: aliceblue;
-    height: 90px;
-}
 
-.footer-container p{
-    font-family: "Libertinus Math",system-ui;
+/* =========================================================
+   PORTFOLIO PAGE
+   ========================================================= */
 
-.link-footer{
-    font-size: 25px;
-}
-#footer{
-    margin-right: 10px;
-}
-/* Portfolio Section Styles */
-.Portfolio{
-    padding:50px 8%;
+.Portfolio {
+    padding: 90px 20px 40px;
+
     text-align: center;
 }
- 
-.Portfolio h2{
+
+.Portfolio h2 {
     font-size: 30px;
+
     margin-bottom: 10px;
+
     color: rgb(24, 43, 43);
 }
- 
-.Portfolio-Intro{
-    font-size: 32px;
+
+.Portfolio-Intro {
+    font-size: 16px;
+
     margin-bottom: 30px;
+
     color: rgb(24, 43, 43);
 }
- 
-.Project-container{
-    display: flex;
-    justify-content: center;
-    gap: 30px;
+
+
+/* =========================================================
+   PROJECT CONTAINER
+   ========================================================= */
+
+.Project-Container {
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    gap: 10px;
+
+    max-width: 350px;
+    margin: auto;
+    /* margin-left:20px; */
+    margin-bottom: 20px;
 }
- 
-.Project-card{
-    width: 300px;
-    background-color: rgb(101, 150, 150);
+
+
+/* =========================================================
+   PROJECT CARD
+   ========================================================= */
+
+.Project-card {
+    width: 100%;
+   
+    /* background-color: rgb(101, 150, 150); */
+     background: linear-gradient(
+        135deg,
+        #0f2027,
+        #2c5364
+    );
+
+
     border-radius: 10px;
+
     overflow: hidden;
+
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
 }
- 
-.Project-image{
-    height: 180px;
-    background-color: rgb(101, 150, 150);
- 
-    display: flex;
-    justify-content: center;
-    align-items: center;
- 
+
+
+/* =========================================================
+   PROJECT IMAGE
+   ========================================================= */
+
+.Project-image {
+    height: 150px;
+
+    background: linear-gradient(
+        135deg,
+        #0f2027,
+        #2c5364
+    );
+
+    /* Grid instead of Flexbox */
+    display: grid;
+
+    place-items: center;
+
     color: white;
+
     font-size: 22px;
+
     font-weight: bold;
 }
+
+
+/* =========================================================
+   PROJECT INFORMATION
+   ========================================================= */
+
 .Project-Info {
     padding: 25px;
+
     text-align: left;
 }
- 
+
 .Project-Info h3 {
-    color: rgb(24, 43, 43);
+    color: rgb(101, 150, 150); 
+
+    margin-top: 0;
     margin-bottom: 12px;
 }
- 
+
 .Project-Info p {
     line-height: 1.6;
-    color: #555;
+
+    color:aliceblue;
 }
- 
+
 .technologies {
     margin-top: 15px;
+
     font-size: 14px;
 }
+
+
+/* =========================================================
+   PROJECT LINK
+   ========================================================= */
+
 .Project-link {
     display: inline-block;
+
     margin-top: 15px;
+
     padding: 10px 18px;
- 
+
     background-color: rgb(24, 43, 43);
+
     color: white;
- 
+
     text-decoration: none;
+
     border-radius: 6px;
 }
- 
- 
-/* Hover effects */
- 
-.Project-card:hover {
-    transform: translateY(-8px);
- 
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
+
 .Project-link:hover {
     background-color: rgb(101, 150, 150);
 }
-.Project-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 30px;
+
+
+/* =========================================================
+   PROJECT HOVER
+   ========================================================= */
+
+.Project-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 10px 20px rgba(0, 0, 0, 0.2);
 }
- 
-.Project-card {
-    width: 400px;
-}
- 
-#contact{
-    padding: 50px 8%;
+
+
+/* =========================================================
+   CONTACT PAGE
+   ========================================================= */
+
+#contact {
+    padding: 90px 20px 40px;
+
     text-align: center;
 }
- 
-#contact h2{
+
+#contact h2 {
     font-size: 30px;
+
     margin-bottom: 20px;
+
     color: rgb(24, 43, 43);
 }
- 
-#contact p{
+
+#contact p {
     margin-bottom: 30px;
+
     color: #555;
+
     font-size: 16px;
 }
- 
-form{
+
+
+/* =========================================================
+   FORM
+   ========================================================= */
+
+form {
     max-width: 600px;
+
     margin: 0 auto;
-    display: flex;
-    flex-direction: column;
+
+    display: grid;
+
+    grid-template-columns: 1fr;
+
     gap: 15px;
 }
- 
-label{
+
+label {
     text-align: left;
+
     font-weight: bold;
+
     color: rgb(24, 43, 43);
 }
- 
-input, textarea{
+
+input,
+textarea {
+    width: 100%;
+
     padding: 12px;
+
     border: 1px solid #ccc;
+
     border-radius: 6px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+    font-family:
+        Verdana,
+        Geneva,
+        Tahoma,
+        sans-serif;
+
+    box-sizing: border-box;
 }
- 
-button{
+
+form button {
     padding: 12px;
+
     background-color: rgb(24, 43, 43);
+
     color: white;
+
     border: none;
+
     border-radius: 6px;
+
     cursor: pointer;
-    transition: background-color 0.3s ease;
+
+    transition:
+        background-color 0.3s ease;
 }
- 
-button:hover{
+
+form button:hover {
     background-color: rgb(101, 150, 150);
 }
- 
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.footer-container {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    align-items: center;
+
+    text-align: center;
+
+    background: linear-gradient(
+        90deg,
+        #0b1719,
+        #162f35
+    );
+
+    color: aliceblue;
+
+    min-height: 90px;
+}
+
+.footer-container p {
+    font-family: "Libertinus Math", system-ui;
+
+    margin: 0;
+}
+
+.link-footer {
+    font-size: 25px;
+}
+
+#footer {
+    margin-right: 10px;
+}
+
+
+/* =========================================================
+   TABLET
+   768px+
+   ========================================================= */
+
+@media screen and (min-width: 710px) {
+
+    /* -------------------------
+       Header
+       ------------------------- */
+
+    .header-container {
+        grid-template-columns: 1fr 1fr 2fr;
+
+        padding: 5px 30px;
+
+        gap: 20px;
+    }
+
+    .header-container p {
+        font-size: 15px;
+    }
+
+    .Link-header {
+        margin-left: 0;
+    }
+
+
+    /* -------------------------
+       Navigation
+       ------------------------- */
+
+    .nav-bar {
+        margin-left: 0;
+
+        text-align: right;
+    }
+
+    .menu-btn {
+        display: none;
+    }
+
+    .nav-bar ul {
+        display: grid;
+
+        grid-template-columns:
+            repeat(4, auto);
+
+        position: static;
+
+        width: auto;
+        height: auto;
+
+        opacity: 1;
+
+        background-color: transparent;
+    }
+
+    .nav-bar li {
+        float: none;
+    }
+
+    .nav-bar a {
+        padding: 15px 10px;
+    }
+
+
+    /* -------------------------
+       Main
+       ------------------------- */
+
+    .main-container {
+        padding: 100px 40px 30px;
+    }
+
+
+    /* -------------------------
+       Hero
+       ------------------------- */
+
+    .image-john {
+        height: 230px;
+        width: 230px;
+    }
+
+    #job {
+        font-size: 35px;
+    }
+
+
+    /* -------------------------
+       Skills
+       ------------------------- */
+
+    .skills {
+        grid-template-columns:
+            repeat(3, 1fr);
+
+        gap: 20px;
+    }
+
+
+    /* -------------------------
+       Portfolio
+       ------------------------- */
+
+    .Portfolio {
+        padding: 100px 40px 50px;
+    }
+
+    .Project-Container {
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 30px;
+    }
+
+
+    /* -------------------------
+       Contact
+       ------------------------- */
+
+    #contact {
+        padding: 100px 40px 50px;
+    }
+}
+
+
+/* =========================================================
+   DESKTOP
+   1024px+
+   ========================================================= */
+
+@media screen and (min-width: 1024px) {
+
+    /* -------------------------
+       Header
+       ------------------------- */
+
+    .header-container {
+        grid-template-columns:
+            0.85fr 1fr 1fr;
+
+        padding: 8px 50px;
+    }
+
+    .header-container p {
+        font-size: 17px;
+    }
+
+    .Link-header i {
+        font-size: 35px;
+    }
+
+
+    /* -------------------------
+       Navigation
+       ------------------------- */
+
+    .nav-bar ul {
+        grid-template-columns:
+            repeat(4, auto);
+    }
+
+    .nav-bar a {
+        padding: 10px 0px;
+    }
+
+
+    /* -------------------------
+       Main
+       ------------------------- */
+
+    .main-container {
+        max-width: 1200px;
+
+        margin: auto;
+
+        padding:110px 60px 40px;
+    }
+
+
+    /* -------------------------
+       Hero
+       ------------------------- */
+
+    .image-john {
+        height: 280px;
+        width: 280px;
+    }
+
+    #job {
+        font-size: 42px;
+    }
+
+    #job span {
+        font-size: 20px;
+    }
+
+
+    /* -------------------------
+       Skills
+       ------------------------- */
+
+    .skills {
+        grid-template-columns:
+            repeat(3, 1fr);
+
+        gap: 30px;
+
+        max-width: 1000px;
+
+        margin: auto;
+    }
+
+
+    /* -------------------------
+       Portfolio
+       ------------------------- */
+
+    .Portfolio {
+        max-width: 1200px;
+
+        margin: auto;
+
+        padding:
+            110px 60px 60px;
+    }
+
+    .Portfolio h2 {
+        font-size: 36px;
+    }
+
+    .Portfolio-Intro {
+        font-size: 18px;
+    }
+
+    .Project-Container {
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 40px;
+    }
+
+    .Project-card {
+        width: 100%;
+    }
+
+
+    /* -------------------------
+       Contact
+       ------------------------- */
+
+    #contact {
+        max-width: 1000px;
+
+        margin: auto;
+
+        padding:
+            110px 60px 60px;
+    }
+
+
+    /* -------------------------
+       Footer
+       ------------------------- */
+
+    .footer-container {
+        min-height: 100px;
+    }
+
+}

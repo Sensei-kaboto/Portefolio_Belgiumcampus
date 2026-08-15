@@ -3,32 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="/styles/stylesheet.css">
+    <title>Portfolio Website</title>
+     <link rel="stylesheet" href="../styles/stylesheet.css">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
 </head>
 <body>
-    <header>
-        <h1>John Doe</h1>
-            <nav class="navbar">
-                <ul>
-                   <li><a href="index.html">Home</a></li>
-                    <li><a href="/html-Pages/about.html">About</a></li>
-                    <li><a href="/html-Pages/portfolio.html">Portfolio</a></li>
-                    <li><a href="/html-Pages/contact.html">Contact</a></li>
-                </ul>
-            </nav>
-    </header>
+    <!-- Header  section -->
+    <header class="header-container">
+        <p>
+            Portefolio
+        </p>
+    
+        <a class="Link-header" href=""> <i class='bx bxl-github'></i></a>
 
-    <h3>About Page</h3>
+        <nav class="nav-bar">
+            <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+    <ul id="nav-menu">
+        <li>
+                        <a href="../index.html" target="_parent">Home</a>
+
+        </li>
+        <li>
+                        <a href="about.html" target="_parent">About</a>
+
+        </li>
+        <li>
+                        <a href="portfolio.html" target="_parent">Portfolio</a>
+
+        </li>
+        <li>
+                        <a href="contact.html" target="_parent">Contact</a>
+
+        </li>
+    </ul>
+        </nav>
+
+    </header>
 
     <main>
         <!-- this is the main part of the website so u can type the information in these tags... -->
         
     </main>
+ <!-- footer container -->
 
-    <footer>
-        <span id="footer">© 2020 John Doe</span>            
+    <footer class="footer-container">
+        <p>
+           &copy John Doe
+        </p>
+        <div class="link-footer">
+            <i class='bx bxl-github'></i>
+            <i class='bx bxl-facebook-circle'></i>
+            <i class='bx bxl-linkedin-square'></i>
+            <i class='bx bxl-instagram-alt'></i>
+        </div>
+
     </footer>
-
+    
+    <script src="../js/script.js"></script>
 </body>
 </html>
