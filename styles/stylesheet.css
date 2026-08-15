@@ -565,26 +565,103 @@ a {
    CONTACT PAGE
    ========================================================= */
 
-#contact {
-    padding: 90px 20px 40px;
+/* =========================================
+   CONTACT PAGE
+   ========================================= */
 
+.contact-page {
+    padding: 10px 20px 40px;
+    background-color: #eef5f5;
     text-align: center;
 }
 
-#contact h2 {
+.contact-page h2 {
+    font-family: "Libertinus Math", system-ui;
     font-size: 30px;
+    color: rgb(24, 43, 43);
+    margin-bottom: 10px;
+}
 
-    margin-bottom: 20px;
+.contact-page > p {
+    color: #555;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
 
+
+/* =========================================
+   CONTACT FORM
+   ========================================= */
+
+.contact-page form {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+
+    max-width: 600px;
+    margin: 0 auto;
+
+    text-align: left;
+}
+
+.contact-page label {
+    font-weight: bold;
     color: rgb(24, 43, 43);
 }
 
-#contact p {
-    margin-bottom: 30px;
+.contact-page input,
+.contact-page textarea {
+    width: 100%;
+    box-sizing: border-box;
 
-    color: #555;
+    padding: 12px;
 
-    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+    background-color: white;
+}
+
+.contact-page textarea {
+    resize: vertical;
+}
+
+.contact-page input:focus,
+.contact-page textarea:focus {
+    outline: none;
+    border: 2px solid #2c5364;
+}
+
+
+/* =========================================
+   SEND BUTTON
+   ========================================= */
+
+.contact-page button {
+    padding: 12px;
+
+    background-color: rgb(24, 43, 43);
+    color: white;
+
+    border: none;
+    border-radius: 6px;
+
+    cursor: pointer;
+
+    font-size: 15px;
+
+    transition: background-color 0.3s ease;
+}
+
+.contact-page button:hover {
+    background-color: rgb(101, 150, 150);
+}
+
+.contact-img{
+    height: 190px;
 }
 
 
@@ -592,7 +669,8 @@ a {
    FORM
    ========================================================= */
 
-form {
+
+/* form {
     max-width: 600px;
 
     margin: 0 auto;
@@ -650,7 +728,7 @@ form button {
 
 form button:hover {
     background-color: rgb(101, 150, 150);
-}
+} */
 
 
 /* =========================================================

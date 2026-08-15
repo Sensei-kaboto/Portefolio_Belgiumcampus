@@ -1,69 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio Website</title>
-    <link rel="stylesheet" href="/styles/stylesheet.css">
+    <link rel="stylesheet" href="../styles/stylesheet.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
 </head>
+
 <body>
     <!-- Header  section -->
     <header class="header-container">
         <p>
             Portefolio
         </p>
-    
+
         <a class="Link-header" href=""> <i class='bx bxl-github'></i></a>
 
         <nav class="nav-bar">
             <button class="menu-btn" onclick="toggleMenu()">☰</button>
 
-    <ul id="nav-menu">
-        <li>
-                        <a href="../index.html" target="_parent">Home</a>
+            <ul id="nav-menu">
+                <li>
+                    <a href="../index.html" target="_parent">Home</a>
 
-        </li>
-        <li>
-                        <a href="about.html" target="_parent">About</a>
+                </li>
+                <li>
+                    <a href="about.html" target="_parent">About</a>
 
-        </li>
-        <li>
-                        <a href="portfolio.html" target="_parent">Portfolio</a>
+                </li>
+                <li>
+                    <a href="portfolio.html" target="_parent">Portfolio</a>
 
-        </li>
-        <li>
-                        <a href="contact.html" target="_parent">Contact</a>
+                </li>
+                <li>
+                    <a href="contact.html" target="_parent">Contact</a>
 
-        </li>
-    </ul>
+                </li>
+            </ul>
         </nav>
 
     </header>
     <h3>Contact Page</h3>
 
-    <main>
+    <main class="contact-page">
+
         <h2>Contact Me</h2>
-    <p>Interested in working together? Drop me a message below.</p>
-  
-    <form action="#" method="post">
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name" required>
-    
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" required>
-    
-        <label for="message">Message</label>
-        <textarea id="message" name="message" rows="5" required></textarea>
-    
-        <button type="submit">Send Message</button>
-    </form>
+
+        <p>
+            Interested in working together? Drop me a message below.
+        </p>
+
+        <form action="#" method="post">
+
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit">Send Message</button>
+
+        </form>
+
+        <img class="contact-img" src="../images/Group 2372.png" alt="">
+
     </main>
 
-     <!-- footer container -->
 
     <footer class="footer-container">
         <p>
-           &copy John Doe
+            &copy; John Doe
         </p>
         <div class="link-footer">
             <i class='bx bxl-github'></i>
@@ -73,7 +85,9 @@
         </div>
 
     </footer>
-    
+
+
     <script src="../js/script.js"></script>
 </body>
+
 </html>
