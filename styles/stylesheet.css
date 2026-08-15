@@ -38,7 +38,7 @@ a {
    ========================================================= */
 
    main{
-    background: url("/images/doodle\ items.png") ;
+    background: url("../images/doodle\ items.png") ;
    }
 .header-container {
     background: linear-gradient(90deg, #0b1719, #162f35);
