@@ -1,56 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio Website</title>
-     <link rel="stylesheet" href="../styles/stylesheet.css">
-        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="../styles/stylesheet.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
 </head>
+
 <body>
     <!-- Header  section -->
     <header class="header-container">
         <p>
             Portefolio
         </p>
-    
+
         <a class="Link-header" href=""> <i class='bx bxl-github'></i></a>
 
         <nav class="nav-bar">
             <button class="menu-btn" onclick="toggleMenu()">☰</button>
 
-    <ul id="nav-menu">
-        <li>
-                        <a href="../index.html" target="_parent">Home</a>
+            <ul id="nav-menu">
+                <li>
+                    <a href="../index.html" target="_parent">Home</a>
 
-        </li>
-        <li>
-                        <a href="about.html" target="_parent">About</a>
+                </li>
+                <li>
+                    <a href="about.html" target="_parent">About</a>
 
-        </li>
-        <li>
-                        <a href="portfolio.html" target="_parent">Portfolio</a>
+                </li>
+                <li>
+                    <a href="portfolio.html" target="_parent">Portfolio</a>
 
-        </li>
-        <li>
-                        <a href="contact.html" target="_parent">Contact</a>
+                </li>
+                <li>
+                    <a href="contact.html" target="_parent">Contact</a>
 
-        </li>
-    </ul>
+                </li>
+            </ul>
         </nav>
 
     </header>
 
-    <main>
-        <!-- this is the main part of the website so u can type the information in these tags... -->
-        
+    <main class="main-container">
+
+        <section class="about-page">
+
+            <!-- About heading -->
+            <div class="about-container">
+                <p>About Me</p>
+            </div>
+
+            <div class="horizon">
+                <hr>
+            </div>
+
+            <p class="about-lead">
+                Front-end developer focused on clean, responsive interfaces.
+            </p>
+
+            <!-- Bio -->
+            <p id="more-details">
+                I enjoy turning ideas into functional, user-friendly websites and I'm always
+                eager to learn new technologies. With experience across HTML, CSS and JavaScript,
+                I focus on building interfaces that are both practical and pleasant to use.
+            </p>
+
+            <!-- Skills heading -->
+            <div class="Portefolio-container">
+                <p>Skills</p>
+            </div>
+
+            <div class="horizon Portefolio">
+                <hr>
+            </div>
+
+            <!-- Skills grid -->
+            <div class="skills">
+                <p>HTML5 <span>Advanced</span></p>
+                <p>CSS3 <span>Advanced</span></p>
+                <p>JavaScript <span>Intermediate</span></p>
+                <p>React <span>Intermediate</span></p>
+                <p>Node.js <span>Intermediate</span></p>
+                <p>Git &amp; GitHub <span>Advanced</span></p>
+                <p>Responsive Design <span>Advanced</span></p>
+                <p>UI / UX <span>Intermediate</span></p>
+                <p>SQL <span>Beginner</span></p>
+            </div>
+
+        </section>
+
     </main>
- <!-- footer container -->
+
 
     <footer class="footer-container">
         <p>
-           &copy John Doe
+            &copy; John Doe
         </p>
         <div class="link-footer">
             <i class='bx bxl-github'></i>
@@ -60,7 +107,9 @@
         </div>
 
     </footer>
-    
+
+
     <script src="../js/script.js"></script>
 </body>
+
 </html>
