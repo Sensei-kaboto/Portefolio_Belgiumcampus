@@ -974,6 +974,7 @@ margin-top: 80px;
    ABOUT PAGE
    ========================================================= */
 
+```css
 .about-page {
     max-width: 1100px;
     margin: 0 auto;
@@ -995,12 +996,15 @@ margin-top: 80px;
     margin-left: 0;
 }
 
-.about-page .skills p {
+/* Clickable skill cards */
+.about-page .skills .skill {
     display: flex;
     justify-content: space-between;
     align-items: center;
 
+    font-family: inherit;
     font-size: 15px;
+    text-align: left;
 
     background: linear-gradient(135deg, #0f2027, #2c5364);
     color: aliceblue;
@@ -1008,19 +1012,25 @@ margin-top: 80px;
     margin: 0;
     padding: 16px 20px;
 
-    border-radius: 10px;
+    border: none;
     border-left: 4px solid rgb(101, 150, 150);
+    border-radius: 10px;
 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+
+    cursor: pointer;
+
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.about-page .skills p:hover {
+/* Hover effect */
+.about-page .skills .skill:hover {
     transform: translateY(-4px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-.about-page .skills p span {
+/* Skill level */
+.about-page .skills .skill span {
     font-size: 12px;
     font-weight: 400;
 
@@ -1029,16 +1039,45 @@ margin-top: 80px;
     border-radius: 20px;
 }
 
+/* Skill description */
+.about-page .skill-description {
+    margin-top: 20px;
+    padding: 20px;
+
+    background: rgba(101, 150, 150, 0.15);
+
+    border-left: 4px solid rgb(101, 150, 150);
+    border-radius: 10px;
+
+    color: rgb(24, 43, 43);
+
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Description heading */
+.about-page .skill-description h3 {
+    margin: 0 0 8px;
+    font-size: 20px;
+}
+
+/* Description text */
+.about-page .skill-description p {
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* Tablet and desktop */
 @media screen and (min-width: 710px) {
     .about-page .skills {
         grid-template-columns: repeat(3, 1fr);
     }
 
-    .about-page .skills p {
+    .about-page .skills .skill {
         font-size: 16px;
     }
 
-    .about-page .skills p span {
+    .about-page .skills .skill span {
         font-size: 13px;
     }
 }
+
