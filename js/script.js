@@ -50,3 +50,85 @@ function showSkill(skill) {
             "<h3>SQL</h3><p>SQL is used to create, manage and retrieve information from relational databases.</p>";
     }
 }
+
+const form = document.getElementById("contact-form");
+
+if (form) {
+
+    form.addEventListener("submit", function (event) {
+
+        event.preventDefault();
+
+        const name = document.getElementById("name");
+        const email = document.getElementById("email");
+        const message = document.getElementById("message");
+
+        const nameError = document.getElementById("name-error");
+        const emailError = document.getElementById("email-error");
+        const messageError = document.getElementById("message-error");
+
+        let isValid = true;
+
+
+        // Clear previous error messages
+        nameError.textContent = "";
+        emailError.textContent = "";
+        messageError.textContent = "";
+
+
+        // Remove previous error styles
+        name.classList.remove("input-error");
+        email.classList.remove("input-error");
+        message.classList.remove("input-error");
+
+
+        // NAME VALIDATION
+        if (name.value.trim().length < 2) {
+
+            nameError.textContent =
+                "Please enter a valid name.";
+
+            name.classList.add("input-error");
+
+            isValid = false;
+        }
+
+
+        // EMAIL VALIDATION
+        const emailPattern =
+            /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        if (!emailPattern.test(email.value.trim())) {
+
+            emailError.textContent =
+                "Please enter a valid email address.";
+
+            email.classList.add("input-error");
+
+            isValid = false;
+        }
+
+
+        // MESSAGE VALIDATION
+        if (message.value.trim().length < 10) {
+
+            messageError.textContent =
+                "Your message must contain at least 10 characters.";
+
+            message.classList.add("input-error");
+
+            isValid = false;
+        }
+
+
+        // SUCCESS
+        if (isValid) {
+
+            alert("Message sent successfully!");
+
+            form.reset();
+        }
+
+    });
+
+}

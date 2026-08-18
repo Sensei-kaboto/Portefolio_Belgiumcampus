@@ -53,7 +53,7 @@
                 Interested in working together? Drop me a message below.
             </p>
 
-            <form action="#" method="post">
+            <form  id="contact-form" action="#" method="post">
 
                 <label for="name">Name</label>
                 <input type="text" id="name" name="name" required>
@@ -61,8 +61,20 @@
                 <label for="email">Email</label>
                 <input type="email" id="email" name="email" required>
 
-                <label for="message">Message</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
+                <small class="error-message" id="email-error"></small>
+
+
+    <label for="message">Message</label>
+    <textarea
+        id="message"
+        name="message"
+        rows="5"
+        placeholder="Write your message"
+        minlength="10"
+        required
+    ></textarea>
+
+    <small class="error-message" id="message-error"></small>
 
                 <button type="submit">Send Message</button>
 
